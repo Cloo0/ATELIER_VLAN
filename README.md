@@ -164,16 +164,21 @@ PC1 → PC2
 PC1 → PC3  
 👉 Fonctionne uniquement grâce au routeur
 
-* * Copie d'écran ici * *  
+<img width="1332" height="1024" alt="image" src="https://github.com/user-attachments/assets/43cb60e8-19bb-44eb-b3d4-8e32e5aa4a67" />
   
 ---
 
 # ❓ Questions de réflexion
 
-1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> Répondez directement sur ce Readme.md 
-2. Quel rôle joue le masque /24 ? -> Répondez directement sur ce Readme.md  
-3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Répondez directement sur ce Readme.md  
-4. Pourquoi un trunk est-il nécessaire ? -> Répondez directement sur ce Readme.md
+1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> Répondez directement sur ce Readme.md
+   PC1 ne voit pas PC3 sans routeur car isl font partie de VLANs différents. Ils sont isolés l'un de l'autre.
+3. Quel rôle joue le masque /24 ? -> Répondez directement sur ce Readme.md
+   Le masque /24 attribue les 3 premiers octets de l'adresse ip au réseau, laissant le dernier octet à l'identifiant matériel au sein du même réseau.
+   PC1 a une ip de 192.168.10.10
+   PC3 a une ip de 192.168.20.10
+   Le troisième octet est différent, donc le réseau est différent ce qui explique qu'ils ne puissent pas se voir sans routeur.
+5. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Répondez directement sur ce Readme.md  
+6. Pourquoi un trunk est-il nécessaire ? -> Répondez directement sur ce Readme.md
 
 ---
 
